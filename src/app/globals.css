@@ -1,0 +1,110 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* White */
+    --foreground: 222.2 84% 4.9%; /* Dark Gray for text */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 47 100% 32%; /* Dark Gold #A57C00 */
+    --primary-foreground: 47 25% 95%; /* Light Gold/Off-white for text on primary */
+
+    --secondary: 210 40% 96.1%; /* Light Gray */
+    --secondary-foreground: 222.2 84% 4.9%; /* Dark Gray */
+
+    --muted: 210 40% 96.1%; /* Light Gray */
+    --muted-foreground: 210 40% 45.1%; /* Medium Gray */
+
+    --accent: 45 95% 42%; /* Brighter Gold #D4A006 */
+    --accent-foreground: 220 13% 9%; /* Near Black for text on accent */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 40% 89.8%; /* Light Gray Border */
+    --input: 210 40% 89.8%; /* Light Gray Input Background */
+    --ring: 47 100% 32%; /* Dark Gold for focus rings */
+
+    --radius: 0.5rem;
+
+    /* Sidebar specific colors */
+    --sidebar-background: 0 0% 98%; 
+    --sidebar-foreground: 222.2 84% 4.9%;
+    --sidebar-primary: 47 100% 32%;
+    --sidebar-primary-foreground: 47 25% 95%;
+    --sidebar-accent: 45 95% 42%;
+    --sidebar-accent-foreground: 220 13% 9%;
+    --sidebar-border: 210 40% 89.8%;
+    --sidebar-ring: 47 100% 32%;
+
+    --chart-1: 47 100% 32%; /* Primary Gold */
+    --chart-2: 45 95% 42%; /* Accent Gold */
+    --chart-3: 35 80% 50%; /* Warmer Gold/Orange */
+    --chart-4: 50 70% 55%; /* Muted Gold/Olive */
+    --chart-5: 210 40% 70%; /* Neutral Light Gray */
+  }
+
+  .dark {
+    --background: 220 13% 9%; /* Near Black */
+    --foreground: 210 40% 98%; /* Almost White */
+
+    --card: 220 13% 12%; /* Darker card background */
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 13% 12%; /* Darker popover background */
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 47 100% 32%; /* Dark Gold #A57C00 */
+    --primary-foreground: 47 25% 95%; /* Light Gold/Off-white for text on primary */
+
+    --secondary: 217 33% 17%; /* Dark Gray-Blue */
+    --secondary-foreground: 210 40% 80%; /* Lighter Gray for text on secondary */
+
+    --muted: 217 33% 15%; /* Very Dark Gray-Blue */
+    --muted-foreground: 210 40% 60%; /* Medium Gray for text on muted */
+
+    --accent: 45 95% 42%; /* Brighter Gold #D4A006 */
+    --accent-foreground: 220 13% 9%; /* Near Black for text on accent */
+
+    --destructive: 0 70% 50%; /* Slightly darker red for dark theme */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 217 33% 25%; /* Dark Gray-Blue Border */
+    --input: 217 33% 25%; /* Dark Gray-Blue Input Background */
+    --ring: 47 100% 32%; /* Dark Gold for focus rings - (matches primary) */
+
+    /* Dark Sidebar specific colors */
+    --sidebar-background: 220 13% 11%; 
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 47 100% 32%; 
+    --sidebar-primary-foreground: 47 25% 95%;
+    --sidebar-accent: 45 95% 42%;
+    --sidebar-accent-foreground: 220 13% 9%;
+    --sidebar-border: 217 33% 25%;
+    --sidebar-ring: 47 100% 32%; /* (matches primary) */
+
+    --chart-1: 47 100% 32%; /* Primary Gold */
+    --chart-2: 45 95% 42%; /* Accent Gold */
+    --chart-3: 35 80% 50%; /* Warmer Gold/Orange */
+    --chart-4: 50 70% 55%; /* Muted Gold/Olive */
+    --chart-5: 210 40% 70%; /* Neutral Light Gray */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Removed explicit font-family to allow Geist Sans from layout.tsx to take precedence */
+  }
+}
